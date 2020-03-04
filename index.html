@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        Ideias transformadoras!
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="seplag png.png" alt="DOE"> 
+        <H2>A SUA IDEIA FAZ A DIFERENÇA!</H2>
+        <p>A sua ideia poderá transformar a vida 
+            de todos os cidadãos de São Gonçalo do Amarante. Compartilhe
+            vamos construir um futuro ainda melhor!
+        </p>
+        
+
+        <button>Quero ajudar</button>
+    </header>
+
+    <section class="form hide">
+        <h2>Faça a diferença</h2>
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome Completo">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="blood" placeholder="Titulo da ideia">
+            <textarea placeholder="Digite aqui sua ideia" name="message" rows="5" cols="30" wrap="virtual"></textarea>
+
+            <button>Quero ajudar</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Últimos <span>colaboradores</span> </h2>
+
+        <section class="donors">
+
+            {% for donor in donors %}
+
+            <div class="donor">
+                <div class="blood">{{donor.name}}</div> 
+                
+            </div>
+            
+            {% endfor %}
+
+        </section>
+    </main>
+
+    <footer><img src="ideias transformadoras.png" alt=""></footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
